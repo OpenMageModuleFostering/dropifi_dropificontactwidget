@@ -1,0 +1,383 @@
+ <?php    
+    $this->NeededDetails();
+    $surl = $this->getStoreUrl();
+    
+    $paramsArray = Mage::app()->getRequest()->getParams();
+    $response = $paramsArray['response'];
+    
+    $imgUrl = Mage::getDesign()->getSkinUrl('images/dropificontactwidget/dropifi_magento.png');
+    //$imgUrl = $this->getSkinUrl('images/dropificontactwidget/dropifi_magento.png') ;
+    
+    $model = Mage::getModel('dropifi_dropificontactwidget/dropificontactwidget')->load(1);        
+    $v = $model->getDropifi_pkey();
+    $t = $model->getDropifi_lurl();
+    
+    if($v == NULL || $v == ""){        
+        dropifi_signupform($surl,$imgUrl, $response);
+    } 
+    else{        
+        dropifi_after_signup_page($t, $imgUrl, $response);
+    }
+ ?>
+ 
+<?php  function dropifi_signupform($surl, $imgurl, $response){ 
+        if($response !== ""){ ?>
+   
+    <?php } ?>
+
+<style type="text/css">
+.widget, #widget-list .widget-top, .postbox, .menu-item-settings {
+    background-color: #F5F5F5;
+    background-image: -moz-linear-gradient(center top , #F9F9F9, #F5F5F5);
+}
+
+.widget, #widget-list .widget-top, .postbox, #titlediv, #poststuff .postarea, .stuffbox {
+    border-color: #DFDFDF;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 0 #FFFFFF inset;
+}
+
+.postbox {
+    min-width: 255px;
+    position: relative;
+}
+
+.widget, .postbox, .stuffbox {
+    border-style: solid;
+    border-width: 1px;
+    line-height: 1;
+    margin-bottom: 20px;
+    padding: 0;
+}
+.postbox .inside {
+    margin: 10px 0;
+    position: relative;
+}
+.postbox .inside, .stuffbox .inside {
+    line-height: 1.4em;
+    padding: 0 10px;
+}
+
+.postbox .hndle {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: move;
+}
+.postbox h3 {
+    color: #464646;
+}
+.postbox table.form-table {
+    margin-bottom: 0;
+}
+.form-table {
+    border-collapse: collapse;
+    clear: both;
+    margin-bottom: -8px;
+    margin-top: 0.5em;
+    width: 100%;
+}
+.widget .widget-top, .postbox h3, .stuffbox h3 {
+    border-bottom-color: #DFDFDF;
+    box-shadow: 0 1px 0 #FFFFFF;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.widget .widget-top, .postbox h3, .stuffbox h3, .widefat thead tr th, .widefat tfoot tr th, h3.dashboard-widget-title, h3.dashboard-widget-title span, h3.dashboard-widget-title small, .find-box-head, .sidebar-name, #nav-menu-header, #nav-menu-footer, .menu-item-handle {
+    background-color: #F1F1F1;
+    background-image: -moz-linear-gradient(center top , #F9F9F9, #ECECEC);
+}
+#poststuff h3, .metabox-holder h3 {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    padding: 7px 10px;
+}
+.widget .widget-top, .postbox h3, .stuffbox h3 {
+    -moz-user-select: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    cursor: move;
+    margin-top: 1px;
+}
+.form-table td {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 9px;
+    padding: 8px 10px;
+}
+td, textarea {
+    line-height: inherit;
+}
+td, textarea, input, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+.form-table th, .form-wrap label {
+    color: #222222;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.form-table th {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    width: 200px;
+}
+.form-table th, .form-wrap label {
+    font-weight: normal;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+textarea, input[type="text"], input[type="password"], input[type="file"], input[type="button"], input[type="submit"], input[type="reset"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], select {
+    background-color: #FFFFFF;
+    border-color: #DFDFDF;
+    color: #333333;
+}
+.widefat, div.updated, div.error, .wrap .add-new-h2, textarea, input[type="text"], input[type="password"], input[type="file"], input[type="button"], input[type="submit"], input[type="reset"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], select, .tablenav .tablenav-pages a, .tablenav-pages span.current, #titlediv #title, .postbox, #postcustomstuff table, #postcustomstuff input, #postcustomstuff textarea, .imgedit-menu div, .plugin-update-tr .update-message, #poststuff .inside .the-tagcloud, .login form, #login_error, .login .message, #menu-management .menu-edit, .nav-menus-php .list-container, .menu-item-handle, .link-to-original, .nav-menus-php .major-publishing-actions .form-invalid, .press-this #message, #TB_window, .tbtitle, .highlight, .feature-filter, #widget-list .widget-top, .editwidget .widget-inside {
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px;
+}
+input[type="text"], input[type="password"], input[type="number"], input[type="search"], input[type="email"], input[type="url"], textarea {
+    -moz-box-sizing: border-box;
+}
+textarea, input, select {
+    margin: 1px;
+    padding: 3px;
+}
+a, input, select {
+    outline: 0 none;
+}
+input, select {
+    line-height: 15px;
+}
+td, textarea, input, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+.wrap {
+    margin: 4px 15px 0 0;
+}
+.wrap h2 {
+    color: #464646;
+}
+h2 .nav-tab, .wrap h2, .subtitle, .login form .input {
+    font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
+}
+.wrap h2 {
+    font-size: 23px;
+    line-height: 29px;
+    padding: 9px 15px 4px 0;
+}
+.wrap h2, .subtitle {
+    font-weight: normal;
+    margin: 0;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.postbox-container {
+    float: left;
+}
+
+.notification-dropifi {
+    background-color: #FFF9E9;
+    border-bottom: 1px solid #EEE2BE;
+    border-top: 1px solid #EEE2BE;
+    color: #444444;
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0 0 -3px;
+    padding: 5px 27px 5px 47px;
+    position: relative;
+}
+ 
+</style>
+<div class="wrap">
+	<div id="icon-options-general" class="icon32"></div>
+		<h2 class='content-header'>Dropifi Contact Widget Setup</h2> 
+		
+	<div class='notification-dropifi'><?php echo $response  ?></div> 
+    <div style="margin-right:40px; min-width:400px; width:45%;margin-top:10px;" class="postbox-container">
+        <div class="metabox-holder" id="dropifi_signup"> 
+            <div class="meta-box-sortables"> 
+                <div class="postbox">
+                    <h3 class="hndle"><span>New to Dropifi ? Create An Account</span></h3>
+                    
+                    <div class="inside">   
+                    	<div style="background-size: 40px 40px;background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+							transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,transparent 75%, transparent);box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);
+		 width: 100%; border: 1px solid; color: #fff; padding: 15px;text-shadow: 0 1px 0 rgba(0,0,0,.5);  animation: animate-bg 5s linear infinite; width:94%;
+       background-color: #4ea5cd; border-color: #3b8eb5;" class="" id="dropifi_s_message_status">Once you submit the details below, the Dropifi contact widget will be installed on your site. Login to your dropifi account to customize the look and feel of your widget.</div>
+                        <hr> 
+                        <form id="dropifi_signup" action="<?php echo Mage::getUrl('dropificontactwidget/adminhtml_dropifi/signup'); ?>" method="post"> 
+                             <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />
+                             
+                            <input type="hidden" id="hostUrl" name="hostUrl"  value="<?php echo $surl ?>" />            
+							<input type="hidden" id="requestUrl" name="requestUrl"  value="<?php echo $surl ?>" />            
+							<input type="hidden" id="siteUrl" name="siteUrl"  value="<?php echo $surl ?>" />
+										 
+                            <table class="form-table">
+                            
+                                <tbody><tr valign="top">
+                                <th style="width:100px" scope="row">Full Name </th>
+                                <td><input type="text" class="dropifi_s_msg_error" style="width:100%" value="" id="fullname" name="fullname"></td>
+                                </tr>
+                                
+                                <tr valign="top">
+                                <th style="width:100px" scope="row">Email</th>
+                                <td><input type="text" class="dropifi_s_msg_error" style="width:100%" value="" id="email" name="email"></td>
+                                </tr>
+                                <tr valign="top"> 
+                                <th style="width:100px" scope="row">Password</th>
+                                <td><input type="password" class="dropifi_s_msg_error" style="width:100%" value="" id="password" name="password"></td>
+                                </tr>
+                                 
+                                <tr valign="top">
+                                <th style="width:80px" scope="row">Re-Password</th>
+                                <td><input type="password" class="dropifi_s_msg_error" style="width:100%" value="" id="repassword" name="repassword"></td>
+                                </tr>
+                                
+                                <tr valign="top">
+                                <th style="width:100px" scope="row">Shop Name</th>
+                                <td><input type="text" title="your company name should not contain special characters" class="dropifi_s_msg_error" style="width:100%" value="" id="storeDomain" name="storeDomain"></td>
+                                </tr>
+                                
+                                <tr valign="top">
+                                <th colspan="2">
+								By creating an account, you agree to Dropifi's <a class="" target="_blank" href="https://www.dropifi.com/legal_terms">Beta Terms and Conditions</a></th>
+                                </tr>
+                                
+                                <tr valign="top"> 
+                                 
+                                <th colspan="2"><input type="submit" id="dropifi_create_new_account" value="Create A New Account" class="form-button button-primary" style="float:right"></th>
+                                </tr>
+                            </tbody></table> 
+                            
+                        </form>  
+                    </div>		
+                </div>
+            </div>  
+        </div> 
+    </div>  
+	
+	<div style="min-width:400px; width:45%;margin-top:10px;" class="postbox-container">
+			<div class="metabox-holder" id="dropifi_login">
+			 <div class="meta-box-sortables">
+					<div class="postbox">
+						<h3 class="hndle"><span>Already a Dropifi user ? Login with your Dropifi Account</span></h3>
+						 <div class="inside">
+								<div style="background-size: 40px 40px;background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+								transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,transparent 75%, transparent);box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);
+			 width: 100%; border: 1px solid; color: #fff; padding: 15px;text-shadow: 0 1px 0 rgba(0,0,0,.5);  animation: animate-bg 5s linear infinite; width:94%;
+		   background-color: #4ea5cd; border-color: #3b8eb5;" class="" id="dropifi_l_message_status">Once you submit your login details below, the Dropifi contact widget will be installed on your site. Login to your dropifi account to customize the look and feel of your widget.</div>
+							 
+							<hr>
+							<form id="dropifi_login" name="dropifi_login" action="<?php echo Mage::getUrl('dropificontactwidget/adminhtml_dropifi/login'); ?>" method="post">
+							 <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />  
+							<input type="hidden" id="requestUrl" name="requestUrl" value="<?php echo $surl ?>" />
+							<input type="hidden" id="siteUrl" name="siteUrl" value="<?php echo $surl ?>" />						 
+							 <table class="form-table"> 
+								
+								<tbody><tr valign="top">
+								<th style="width:60px" scope="row">Email</th> 
+								<td><input type="text" style="width:100%" class="dropifi_l_msg_error" value="" id="login_email" name="login_email"></td>
+								</tr>
+								
+								<tr valign="top"> 
+								<th style="width:60px" scope="row">Password</th>
+								<td><input type="password" style="width:100%" class="dropifi_l_msg_error" value="" id="password" name="password"></td>
+								</tr>
+								
+								<tr valign="top">  
+								
+								<th colspan="2"><input type="submit" id="dropifi_login_account" value="Login" class="form-button button-primary" style="float:right"></th>
+								</tr>
+							  
+							  </tbody></table>
+							  </form>
+						  </div>
+					  </div>
+			</div>
+		</div>
+		
+	</div>
+     	
+    
+<div class="clear"></div></div>	
+
+
+<?php
+} 
+
+function dropifi_after_signup_page($tempLoginUrl, $imgurl, $response){ 
+ if($response !== ""){ ?>
+
+<?php }?>
+
+<div class="wrap">
+<div id="icon-options-general" class="icon32"></div>
+ <!--<h2 class='content-header'>Dropifi Contact Widget</h2> /-->
+    <div style="width:100%;min-width:800px;margin-top:10px;" id="wordpress_dropifi"> 
+    
+    <div style="width:100%;
+	background-color:#5AA9D3;
+	-webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+	padding:10px 0px;" id="dropifi_header">
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img width="113" height="65" alt="Dropifi Contact Widget" src="<?php echo $imgurl ?>">
+    <span style="top:-7px; position:relative;color: #FFFFFF;
+    font-size: 2.0em;
+    font-weight: bold;
+    height: auto;
+    line-height: 0.95em;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    width: auto;">Turn Your Site Visitors Into Loyal Customers </span>
+    </div>
+    
+    <div style="min-height:50px; 
+	background-color:#F9F9F9;
+	padding:10px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
+	border:1px solid #DADADA;" id="dropifi_after_header">
+     <p>
+   <span style=" margin-left:10px;margin-right:10px;" id="reset_dropifi_account" href="#" class="button-primary">
+    <form action="<?php echo Mage::getUrl('dropificontactwidget/adminhtml_dropifi/reset'); ?>"  method="post">
+        <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />
+        <input class="form-button" type="submit" value="Reset Your Account" id="reset_account" />                                                                                                                  
+    </form>
+	</span>
+   <span> OR </span>  
+   <a style="margin-left:10px;" id="login_dropifi_account" href="<?php echo $tempLoginUrl ?>" target="_blank" class="button-primary"><button>Go to your Dropifi Dashboard</button></a></p> 
+    
+    </div>
+    
+    
+    <div style="-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	background-color:#F9F9F9;
+	height:300px;
+	margin-top:20px;
+	border:1px solid #DADADA;" id="dropifi_content">
+    <div style="padding:10px;font-size:14px;">
+    <p><strong>You have successfully installed your Dropifi contact widget. Your customer engagement is now simplified and more insightful. Best of all, getting  you off to a good start is really easy!</strong></p>
+ <p><ol style='list-style-type: decimal; margin-left: 2em;padding:5px'>
+<li style='margin-bottom: 6px;'>Customize the Dropifi contact widget from <span style="font-style:italic">Admin &gt;&gt; Mail Management &gt;&gt; Contact Widget</span> on your Dropifi dashboard. You can modify the content of the form, widget color and tab text to suit your preferences.</li>
+<li style='margin-bottom: 6px;'>Add your customer support staff for easy collaboration to wow your customers.</li>
+<li style='margin-bottom: 6px;'>Does your company use different email addresses to support your customers? Then consider adding mailboxes. This gives you the option anytime to select the email address from which to send a message.</li>
+<li style='margin-bottom: 6px;'>Among the range of customizations that make your life flexible, you can also add quick response templates, add predefined subjects for your widget and add message recipients whom copies of all messages will be sent to.</li>
+</ol></p>
+<p>If you hit a stumbling block, reference our <a target="_blank" href="http://support.dropifi.com">support</a> page or get in touch with us through <a href="mailto:support@dropifi.com">support@dropifi.com</a>. We promise to get back to you within a couple of hours.</p>
+</div>
+    </div>
+    
+    </div>
+
+    
+</div>
+<?php } ?>  
+

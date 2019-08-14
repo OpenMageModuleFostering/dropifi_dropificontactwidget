@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout version="1.0.0"> 
+    <dropificontactwidget_adminhtml_dropifi_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/dropificontactwidget/dropificss.css</stylesheet></action>
+        </reference>
+        <reference name="content">
+            <block type="dropificontactwidget/adminhtml_dropifiblock" name="dropifiwidget1" template="dropifi/dropificontactwidget/dropifiwidget.phtml" />
+        </reference>
+    </dropificontactwidget_adminhtml_dropifi_index>         
+</layout>

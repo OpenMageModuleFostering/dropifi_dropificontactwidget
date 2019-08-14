@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Dropifi_Dropificontactwidget>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Dropifi_Dropificontactwidget>
+	</modules>
+</config>

@@ -1,0 +1,7 @@
+<!--start dropifi --><script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.magento.js'></script>
+<script type="text/javascript"><?php $model = Mage::getModel('dropifi_dropificontactwidget/dropificontactwidget')->load(1);    $dmpk = $model->getDropifi_pkey();        
+        if(Mage::helper('core')->isModuleOutputEnabled('Dropifi_Dropificontactwidget')){ ?>document.renderDropifiWidget('<?php echo $dmpk ?>');<?php
+    }else{ ?>document.renderDropifiWidget(''); <?php } ?></script><!--end dropifi -->
+ 
+ 
+
