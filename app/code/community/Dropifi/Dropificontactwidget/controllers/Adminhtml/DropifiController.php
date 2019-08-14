@@ -20,7 +20,7 @@
                           $model->setEmail($data['userEmail'])
                           ->setPassword($data['password'])
                           ->setDropifi_pkey($data['publicKey'])
-                          ->setDropifi_lurl("http://www.dropifi.com/ecommerce/magento/login/?temToken=".$data['temToken']."&userEmail=".$data['userEmail'])
+                          ->setDropifi_lurl("https://www.dropifi.com/ecommerce/magento/login/?temToken=".$data['temToken']."&userEmail=".$data['userEmail'])
                           ->setCreated_at(Varien_Date::now())
                           ->save();   
                       }

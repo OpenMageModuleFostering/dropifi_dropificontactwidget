@@ -3,7 +3,7 @@
 	<modules>
 		<Dropifi_Dropificontactwidget>
 			<active>true</active>
-			<codePool>local</codePool>
+			<codePool>community</codePool>
 		</Dropifi_Dropificontactwidget>
 	</modules>
 </config>

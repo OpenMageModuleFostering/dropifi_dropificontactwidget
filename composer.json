@@ -3,10 +3,10 @@
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
-    "description": "Responsive and Spam-free contact form that delivers extensive visitor engagement insight.",
+    "description": "Spam-free contact form that delivers extensive visitor engagement insight.",
     "authors": [
     {
-        "name": "Effah Mensah",
+        "name": "Dropifi Limited",
         "email": "philips@dropifi.com"
     }
 ],
