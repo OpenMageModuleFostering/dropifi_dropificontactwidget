@@ -1,25 +1,58 @@
 <?xml version="1.0"?>
 <package>
     <name>Dropifi_Dropificontactwidget</name>
-    <version>1.0.2</version>
+    <version>1.2.0</version>
     <stability>stable</stability>
-    <license uri="http://opensource.org/licenses/osl-3.0.php">GNU General Public License (GPL)</license>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">GNU G eneral Public License ( GPL )</license>
     <channel>community</channel>
     <extends/>
     <summary>Spam-free contact form that delivers extensive visitor engagement insight.</summary>
-    <description>Long, scary and hidden contact us forms deny businesses of valuable leads and feedback. They are also dump and do not offer any customer engagement insight for better business decision making. Dropifi seeks to clear out the era of long and scary contact forms that deny businesses of valuable feedback and leads, whiles delivering business insight and a spam-free experience to customer engagement.&#xD;
+    <description>&lt;p&gt;Long, scary and hidden contact us forms deny businesses of valuable leads and feedback. They are also dump and do not offer any customer engagement insight for better business decision making. Dropifi seeks to clear out the era of long and scary contact forms that deny businesses of valuable feedback and leads, whiles delivering business insight and a spam-free experience to customer engagement. &lt;/p&gt;&#xD;
 &#xD;
-Using the Dropifi contact widget, companies can see incoming message trending data in relation to industry metrics, see the demographic and social media profiles of the message senders, analyze the real emotions behind the messages they receive and easily integrate with their existing CRMs, e-commerce and blogging platforms. Dropifi's anti-spam technology makes companies' experience interacting with customers spam-free and fun.&#xD;
+&lt;p&gt;Using the Dropifi contact widget, companies can see incoming message trending data in relation to industry metrics, see the demographic and social media profiles of the message senders, analyze the real emotions behind the messages they receive and easily integrate with their existing CRMs, e-commerce and blogging platforms. Dropifi's anti-spam technology makes companies' experience interacting with customers spam-free and fun.&lt;/p&gt;&#xD;
 &#xD;
-With this tool, companies can generate more business leads, make better business decisions, offer a more personalized and better customer service experience, save time, increase productivity and boost their ROI.&#xD;
+&lt;p&gt;With this tool, companies can generate more business leads, make better business decisions, offer a more personalized and better customer service experience, save time, increase productivity and boost their ROI.&lt;/p&gt;&#xD;
 &#xD;
-This is an offical Dropifi plugin which lets you embed the Dropifi javascript integration code in to your pages without touching code. Install the plugin once and you never have to touch it again to make any changes&#xD;
-</description>
-    <notes>This version of Dropifi Contact Widget has been designed to load faster the the previous versions.</notes>
+&lt;p&gt;This is an offical Dropifi plugin which lets you embed the Dropifi javascript integration code in to your pages without touching code. Install the plugin once and you never have to touch it again to make any changes.&lt;/p&gt;&#xD;
+&#xD;
+&lt;h2&gt;Features &lt;/h2&gt;&#xD;
+&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;install in 60 seconds and get started in no time&lt;/li&gt;&#xD;
+&lt;li&gt;Customize everything; text on tab, colors, labels and templates for sending messages etc.&lt;/li&gt;&#xD;
+&lt;li&gt;Robust anti-spam filters&lt;/li&gt;&#xD;
+&lt;li&gt;Messaging inbox customized for just what you do&lt;/li&gt;&#xD;
+&lt;li&gt;Send automatic responses&lt;/li&gt;&#xD;
+&lt;li&gt;Sentiment Analysis and contact demographic information discovery&lt;/li&gt;&#xD;
+&lt;li&gt;Re-route messages to the right persons in your organisation based on business rules you set.&lt;/li&gt;&#xD;
+&lt;li&gt;Advanced Analytics and Industry Comparison&lt;/li&gt;&#xD;
+&lt;li&gt;Team collaboration&lt;/li&gt;&#xD;
+&lt;li&gt;Multi-language support&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&#xD;
+&lt;p&gt;&lt;a href="http://www.dropifi.com/features"&gt;More on Dropifi here - Dropifi.com/features&lt;/a&gt;&lt;/p&gt;&#xD;
+&#xD;
+&lt;h2&gt;Installation Instruction&lt;/h2&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Download and install the extension&lt;/li&gt;&#xD;
+&lt;li&gt;On your Magento Admin Page, locate  the Dropifi Contact Widget menu and click on settings&lt;/li&gt;&#xD;
+&lt;li&gt;On the settings page, install the Dropifi Contact Widget by using your existing Dropifi account or Create a new account.   The configuration page also gives you the option to move directly to your Dropifi dashboard&lt;/li&gt;&#xD;
+&#xD;
+&lt;/ul&gt;</description>
+    <notes>Release: File Attachment - Your site visitors can securely send file documents through the contact widget&#xD;
+&#xD;
+Release: Managed Mailboxes - Allows you to bring all your customer support emails into one inbox for convenience and better business insights.&#xD;
+    &#xD;
+Release: Upgrade to Dropifi premium to remove all Dropifi branding and own the widget.&#xD;
+    &#xD;
+BugFix: General performance improvement - The Contact Widget loads faster than ever .&#xD;
+&#xD;
+BugFix: Support for latest version of php&#xD;
+</notes>
     <authors><author><name>Dropifi Limited</name><user>philipeffah</user><email>philips@dropifi.com</email></author></authors>
-    <date>2013-02-13</date>
-    <time>22:31:12</time>
-    <contents><target name="magelocal"><dir name="Dropifi"><dir name="Dropificontactwidget"><dir name="Block"><dir name="Adminhtml"><file name="Dropifiblock.php" hash="8496274dce13e75f6543a0925e5bf4a9"/></dir><dir name="Html"><file name="Head.php" hash="05aebd206c8211cc246d3defb2ea99b1"/></dir></dir><dir name="Helper"><file name="Data.php" hash="29c56be3badb5136e9b06c05dec6609f"/></dir><dir name="Model"><file name="Dropificontactwidget.php" hash="b533c2d300dc26b0ff2c2bf8ad1d0771"/><dir name="Resource"><dir name="Dropificontactwidget"><file name="Collection.php" hash="c5bbeff5490468d620cfaa8d578a8dc4"/></dir><file name="Dropificontactwidget.php" hash="08492397dc42d03682a0072159bc3171"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="DropifiController.php" hash="95ad1a2e6d34b7bf2b8673ca974e3a1b"/></dir></dir><dir name="etc"><file name="config.xml" hash="6e73cf0237ca20fb3a3ab604fa5c183a"/></dir><dir name="lib"><file name="dropifi_install.php" hash="a60e92ec427c33fe5c18dcb2589d8761"/></dir><dir name="sql"><dir name="dropifi_dropificontactwidget_setup"><file name="install-1.0.0.php" hash="c41536115e1d036df640499717c6a5cc"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Dropifi_Dropificontactwidget.xml" hash="bdf74dc5ceafe7dd54cdb6f16d686516"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="dropificontactwidget.xml" hash="4a7db70f52ccb8d029ba723a258fa5e4"/></dir><dir name="template"><dir name="dropifi"><dir name="dropificontactwidget"><file name="dropifiwidget.phtml" hash="18892656b58ffde1472116147e762cf7"/></dir></dir></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="dropificontactwidget.xml" hash="af0f3c6a3d471dbc9790d37c8b37f149"/></dir><dir name="template"><dir name="dropifi"><dir name="dropificontactwidget"><file name="dropifiwidget.phtml" hash="b399442783256f3257008781714ae65e"/></dir></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="images"><dir name="dropificontactwidget"><file name="dropifi_magento.png" hash="5027c63ed0dbb0cd95c8af9614cda745"/></dir></dir><dir name="css"><dir name="dropificontactwidget"><file name="dropificss.css" hash="56d279ae63d24d36a8fef9db04383527"/></dir></dir></dir></dir></dir></target></contents>
+    <date>2013-10-15</date>
+    <time>02:16:33</time>
+    <contents><target name="magelocal"><dir name="Dropifi"><dir name="Dropificontactwidget"><dir name="Block"><dir name="Adminhtml"><file name="Dropifiblock.php" hash="8496274dce13e75f6543a0925e5bf4a9"/></dir><dir name="Html"><file name="Head.php" hash="05aebd206c8211cc246d3defb2ea99b1"/></dir></dir><dir name="Helper"><file name="Data.php" hash="29c56be3badb5136e9b06c05dec6609f"/></dir><dir name="Model"><file name="Dropificontactwidget.php" hash="b533c2d300dc26b0ff2c2bf8ad1d0771"/><dir name="Resource"><dir name="Dropificontactwidget"><file name="Collection.php" hash="c5bbeff5490468d620cfaa8d578a8dc4"/></dir><file name="Dropificontactwidget.php" hash="08492397dc42d03682a0072159bc3171"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="DropifiController.php" hash="95ad1a2e6d34b7bf2b8673ca974e3a1b"/></dir></dir><dir name="etc"><file name="config.xml" hash="32bd3dce01dcdb9f85326666c5b28c65"/></dir><dir name="lib"><file name="dropifi_install.php" hash="a60e92ec427c33fe5c18dcb2589d8761"/></dir><dir name="sql"><dir name="dropifi_dropificontactwidget_setup"><file name="install-1.0.0.php" hash="c41536115e1d036df640499717c6a5cc"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Dropifi_Dropificontactwidget.xml" hash="bdf74dc5ceafe7dd54cdb6f16d686516"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="dropificontactwidget.xml" hash="72e2946c0d500d054f49b61c7e635fe1"/></dir><dir name="template"><dir name="dropifi"><dir name="dropificontactwidget"><file name="dropifiwidget.phtml" hash="dce6845504a7757515149bb43884d45e"/></dir></dir></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="dropificontactwidget.xml" hash="e58e29d2d7b5321dbec390b96a8fd3d0"/></dir><dir name="template"><dir name="dropifi"><dir name="dropificontactwidget"><file name="dropifiwidget.phtml" hash="b399442783256f3257008781714ae65e"/></dir></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="css"><dir name="dropificontactwidget"><file name="dropificss.css" hash="56d279ae63d24d36a8fef9db04383527"/></dir></dir><dir name="images"><dir name="dropificontactwidget"><file name="dropifi_magento.png" hash="5027c63ed0dbb0cd95c8af9614cda745"/></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>4.0.0</min><max>5.4.11</max></php></required></dependencies>
+    <dependencies><required><php><min>4.0.0</min><max>5.5.4</max></php></required></dependencies>
 </package>
