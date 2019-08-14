@@ -24,7 +24,7 @@
         if($response !== ""){ ?>
    
     <?php } ?>
-
+<script type="text/javascript" src="https://s3.amazonaws.com/dropifi/js/widget/dropifi_magento.js"></script>
 <style type="text/css">
 .widget, #widget-list .widget-top, .postbox, .menu-item-settings {
     background-color: #F5F5F5;
@@ -210,36 +210,36 @@ h2 .nav-tab, .wrap h2, .subtitle, .login form .input {
        background-color: #4ea5cd; border-color: #3b8eb5;" class="" id="dropifi_s_message_status">Once you submit the details below, the Dropifi contact widget will be installed on your site. Login to your dropifi account to customize the look and feel of your widget.</div>
                         <hr> 
                         <form id="dropifi_signup" action="<?php echo Mage::getUrl('dropificontactwidget/adminhtml_dropifi/signup'); ?>" method="post"> 
-                             <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />
+                             <input type="hidden" id="accessToken" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />
                              
                             <input type="hidden" id="hostUrl" name="hostUrl"  value="<?php echo $surl ?>" />            
 							<input type="hidden" id="requestUrl" name="requestUrl"  value="<?php echo $surl ?>" />            
-							<input type="hidden" id="siteUrl" name="siteUrl"  value="<?php echo $surl ?>" />
+							<input type="hidden" id="site_url" name="siteUrl"  value="<?php echo $surl ?>" />
 										 
                             <table class="form-table">
                             
                                 <tbody><tr valign="top">
                                 <th style="width:100px" scope="row">Full Name </th>
-                                <td><input type="text" class="dropifi_s_msg_error" style="width:100%" value="" id="fullname" name="fullname"></td>
+                                <td><input type="text" class="dropifi_s_msg_error" style="width:100%" value="" id="displayName" name="fullname"></td>
                                 </tr>
                                 
                                 <tr valign="top">
                                 <th style="width:100px" scope="row">Email</th>
-                                <td><input type="text" class="dropifi_s_msg_error" style="width:100%" value="" id="email" name="email"></td>
+                                <td><input type="text" class="dropifi_s_msg_error" style="width:100%" value="" id="user_email" name="email"></td>
                                 </tr>
                                 <tr valign="top"> 
                                 <th style="width:100px" scope="row">Password</th>
-                                <td><input type="password" class="dropifi_s_msg_error" style="width:100%" value="" id="password" name="password"></td>
+                                <td><input type="password" class="dropifi_s_msg_error" style="width:100%" value="" id="user_password" name="password"></td>
                                 </tr>
                                  
                                 <tr valign="top">
                                 <th style="width:80px" scope="row">Re-Password</th>
-                                <td><input type="password" class="dropifi_s_msg_error" style="width:100%" value="" id="repassword" name="repassword"></td>
+                                <td><input type="password" class="dropifi_s_msg_error" style="width:100%" value="" id="user_re_password" name="repassword"></td>
                                 </tr>
                                 
                                 <tr valign="top">
                                 <th style="width:100px" scope="row">Shop Name</th>
-                                <td><input type="text" title="your company name should not contain special characters" class="dropifi_s_msg_error" style="width:100%" value="" id="storeDomain" name="storeDomain"></td>
+                                <td><input type="text" title="your company name should not contain special characters" class="dropifi_s_msg_error" style="width:100%" value="" id="user_domain" name="storeDomain"></td>
                                 </tr>
                                 
                                 <tr valign="top">
@@ -249,7 +249,7 @@ h2 .nav-tab, .wrap h2, .subtitle, .login form .input {
                                 
                                 <tr valign="top"> 
                                  
-                                <th colspan="2"><input type="submit" id="dropifi_create_new_account" value="Create A New Account" class="form-button button-primary" style="float:right"></th>
+                                <th colspan="2"><input type="button" id="dropifi_create_new_account" value="Create A New Account" class="form-button button-primary" style="float:right"></th>
                                 </tr>
                             </tbody></table> 
                             
@@ -273,9 +273,9 @@ h2 .nav-tab, .wrap h2, .subtitle, .login form .input {
 							 
 							<hr>
 							<form id="dropifi_login" name="dropifi_login" action="<?php echo Mage::getUrl('dropificontactwidget/adminhtml_dropifi/login'); ?>" method="post">
-							 <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />  
-							<input type="hidden" id="requestUrl" name="requestUrl" value="<?php echo $surl ?>" />
-							<input type="hidden" id="siteUrl" name="siteUrl" value="<?php echo $surl ?>" />						 
+							 <input type="hidden" id="l_accessToken" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />  
+							<input type="hidden" id="l_requestUrl" name="requestUrl" value="<?php echo $surl ?>" />
+							<input type="hidden" id="l_site_url" name="siteUrl" value="<?php echo $surl ?>" />						 
 							 <table class="form-table"> 
 								
 								<tbody><tr valign="top">
@@ -285,12 +285,12 @@ h2 .nav-tab, .wrap h2, .subtitle, .login form .input {
 								
 								<tr valign="top"> 
 								<th style="width:60px" scope="row">Password</th>
-								<td><input type="password" style="width:100%" class="dropifi_l_msg_error" value="" id="password" name="password"></td>
+								<td><input type="password" style="width:100%" class="dropifi_l_msg_error" value="" id="accessKey" name="password"></td>
 								</tr>
 								
 								<tr valign="top">  
 								
-								<th colspan="2"><input type="submit" id="dropifi_login_account" value="Login" class="form-button button-primary" style="float:right"></th>
+								<th colspan="2"><input type="button" id="dropifi_login_account" value="Login" class="form-button button-primary" style="float:right"></th>
 								</tr>
 							  
 							  </tbody></table>
@@ -301,8 +301,21 @@ h2 .nav-tab, .wrap h2, .subtitle, .login form .input {
 		</div>
 		
 	</div>
-     	
-    
+	
+	<div style='visibility:hidden;'>
+		<form  name="up_dropifi_login" id="up_dropifi_login" action="<?php echo Mage::getUrl('dropificontactwidget/adminhtml_dropifi/login'); ?>" method="post" >
+		<input type="hidden" name="form_key" id="up_accessToken" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />  
+		<input type="hidden" name="requestType" id="up_requestType" value="LOGIN" />
+        <input type="hidden" name="userEmail" id="up_userEmail" value="" /> 
+        <input type="hidden" name="temToken" id="up_temToken" value="" />		 
+        <input type="hidden" name="status" id="up_status" value="" />
+		<input type="hidden" name="publicKey" id="up_publicKey" value="" />
+		<input type="hidden" name="msg" id="up_msg" value="" />
+		<input type="hidden" name="password" id="up_password" value="" /> 		
+		<input type="submit" value="" id="up_submit"/>
+		</form>
+	</div>
+
 <div class="clear"></div></div>	
 
 
