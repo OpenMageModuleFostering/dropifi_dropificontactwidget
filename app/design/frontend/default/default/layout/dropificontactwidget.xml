@@ -1,4 +1,4 @@
-<layout version="1.2.0">
+<layout version="2.0.1">
     <default>
         <reference name="head">
             <block type="core/template" name="keyforHead" template="dropifi/dropificontactwidget/dropifiwidget.phtml" />

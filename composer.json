@@ -1,12 +1,12 @@
 {
     "name": "OpenMageModuleFostering/Dropifi_Dropificontactwidget",
     "type": "magento-module",
-    "license": "GNU-G-eneral-Public-License-(-GPL-)",
+    "license": "Open-Software-License-(OSL)",
     "homepage": "",
-    "description": "Spam-free contact form that delivers extensive visitor engagement insight.",
+    "description": "Responsive and Spam-free contact form that delivers extensive visitor engagement insight.",
     "authors": [
     {
-        "name": "Dropifi Limited",
+        "name": "Effah Mensah",
         "email": "philips@dropifi.com"
     }
 ],

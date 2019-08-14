@@ -3,12 +3,8 @@
     $surl = $this->getStoreUrl();
     
     $paramsArray = Mage::app()->getRequest()->getParams();
-	
-	try{
-		$response = $paramsArray['response'];
-    }catch(Exception  $e){
-		$response="";
-	}
+    $response = $paramsArray['response'];
+    
     $imgUrl = Mage::getDesign()->getSkinUrl('images/dropificontactwidget/dropifi_magento.png');
     //$imgUrl = $this->getSkinUrl('images/dropificontactwidget/dropifi_magento.png') ;
     
