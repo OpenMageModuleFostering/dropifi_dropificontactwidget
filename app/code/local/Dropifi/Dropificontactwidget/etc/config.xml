@@ -2,7 +2,7 @@
  <config>
     <modules>
         <Dropifi_Dropificontactwidget>
-          <version>1.0.0</version>
+          <version>1.0.1</version>
         </Dropifi_Dropificontactwidget>
     </modules>
     <frontend>

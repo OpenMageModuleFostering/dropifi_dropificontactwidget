@@ -3,7 +3,7 @@
   {      
       public function indexAction(){
           $this->loadLayout()
-          ->_setActiveMenu('dropificontactwidget/Dropifi Contact Widget'); 
+          ->_setActiveMenu('dropificontactwidget/Dropifi Contact Widget');
           $this->renderLayout();
       }
       

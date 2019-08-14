@@ -3,10 +3,10 @@
     "type": "magento-module",
     "license": "GNU-General-Public-License-(GPL)",
     "homepage": "",
-    "description": "Spam-free contact form that delivers extensive visitor engagement insight",
+    "description": "Spam-free contact form that delivers extensive visitor engagement insight.",
     "authors": [
     {
-        "name": "Philips Effah",
+        "name": "Dropifi Limited",
         "email": "philips@dropifi.com"
     }
 ],
