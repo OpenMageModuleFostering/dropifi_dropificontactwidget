@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Dropifi_Dropificontactwidget",
+    "name": "OpenMageModuleFostering\/Dropifi_Dropificontactwidget",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "Spam-free contact form that delivers extensive visitor engagement insight.",
     "authors": [
-    {
-        "name": "Dropifi Limited",
-        "email": "philips@dropifi.com"
-    }
-],
+        {
+            "name": "Dropifi Limited",
+            "email": "philips@dropifi.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
